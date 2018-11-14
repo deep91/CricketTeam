@@ -1,21 +1,22 @@
 <!-- Used Pipe Here -->
 <!-- <h1>{{country.name | uppercase}}</h1> -->
 <!-- Two-Way DataBinding  -->
+<div>
 <ul class="countries">
   <li *ngFor = "let country of countries"   [class.selected]="country === selectedCountry"  (click) =onSelectCountry(country)>
     <span class="badge" >
     {{country.id}}</span> {{country.name}} 
   </li>
   </ul>
-
-  <div *ngIf="selectedCountry">
-    <h2>Selected Country is  {{selectedCountry.name | uppercase}} </h2>
+</div>
+  <!-- <div *ngIf="selectedCountry">
     <div>
 <label>CountryName:
     <input [(ngModel)]="selectedCountry.name" placeholder="countryname">
     </label>
     </div>
     </div>
-
+  </div> -->
+<app-country-details [country] ="selectedCountry"></app-country-details>
 
 
