@@ -42,7 +42,7 @@ export class CountriesComponent implements OnInit {
   onSelectCountry(country :Country):void
   {
     this.selectedCountry=country;
-    this.messagesService.add(country.name + ' Selected');
+    // this.messagesService.add(country.name + ' Selected');
   }
   
 
