@@ -24,4 +24,11 @@ getCountries():Observable <Country[]>
 }
 
 
+getCountry(id:number):Observable <Country>
+{
+  this.messages.add('CountryService:fetched country id =' +id );
+  return of (COUNTRIES.find(country => country.id ===id));
+}
+
+
 }

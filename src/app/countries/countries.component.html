@@ -1,14 +1,23 @@
 <!-- Used Pipe Here -->
 <!-- <h1>{{country.name | uppercase}}</h1> -->
 <!-- Two-Way DataBinding  -->
-<div>
+<!-- <div>
 <ul class="countries">
   <li *ngFor = "let country of countries"   [class.selected]="country === selectedCountry"  (click) =onSelectCountry(country)>
     <span class="badge" >
     {{country.id}}</span> {{country.name}} 
   </li>
   </ul>
-</div>
+</div> -->
+  <ul class="countries">
+    <li *ngFor = "let country of countries"  >
+      <a routerLink="/detail/{{country.id}}">
+      <span class="badge" >
+      {{country.id}}</span> {{country.name}}
+      </a> 
+    </li>
+    </ul>
+  
   <!-- <div *ngIf="selectedCountry">
     <div>
 <label>CountryName:
